@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 40px 32% 40px 50px;
+    font-family: Arial, sans-serif;
+    color: #666666;
+    background-color: white;
+}
+
+/* Faixa lateral */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 28%;                 
+    height: 100%;
+    background-color: #cf9994;
+    z-index: -1;
+}
+
+
+h1 {
+    font-family: Georgia, serif;
+}
+
+.header {
+    height: 250px;
+    position: relative;
+}
+
+.foto-perfil {
+    position: absolute;
+    right: -30%;
+    top: 30px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*divisores*/
+section {
+    border-top: 2px solid #cf9994;
+    padding: 20px 0;
+}
+
+
+/* COr do nome*/
+
+#nome {
+    color: #cf9994;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 60px;
+    line-height: 1;
+    width: 450px;
+    margin: 20px 0;
+    
+}
+
+
+/* Cor dos campos de texto do formulário*/
+input[type="text"] {
+    border: 1px solid #cf9994;
+    padding: 8px;
+}
+input[type="number"] {
+    border: 1px solid #cf9994;
+    padding: 8px;
+}
+
+
+/* Titulos*/
+
+section h1 {
+    font-family: Arial, sans-serif;
+    color: #ed9f98;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/* Aba de contatos*/
+
+.contato {
+    border-top: none;
+}
+
+.lista-icones {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+/* Links dos conttaos*/
+
+a {
+    color: #666666;
+    text-decoration: none;
+}
+a:hover {
+    color: #c47f78;
+    text-decoration: underline;
+}
+
+
+/* Listas do curriculo*/
+
+.lista-formacao, .lista-experiencia, .lista-premios, .lista-habilidades {
+    padding-left: 35px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+
+/* FOntes*/
+
+.lista-experiencia > li > p {
+    font-weight: bold;
+}
+
+.lista-habilidades p {
+    font-style: italic;
+}
+
+.premios p {
+    font-weight:bolder;
+}
+
+
+/* Botão para entrar em contato*/
+
+button {
+    background-color: #c9908a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #a96f69;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsibilidade*/
+
+@media (max-width: 800px) {
+
+    body {
+        padding: 30px 8%;
+    }
+
+    body::after {
+        display: none;
+    }
+
+    .header {
+        height: auto;
+        text-align: center;
+    }
+
+    #nome {
+        width: auto;
+        font-size: 40px;
+    }
+
+    .foto-perfil {
+        position: static;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .lista-icones {
+        grid-template-columns: 1fr;
+    }
+}
